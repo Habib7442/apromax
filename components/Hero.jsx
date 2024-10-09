@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <header className="relative bg-header-1 w-full h-screen lg:h-full md:h-full mb-24 lg:mb-0 md:mb-0 sm:py-24 px-5 bg-no-repeat bg-cover bg-center lg:mt-10 md:mt-10 mt-0">
+    <header className="relative bg-header-1 w-full h-screen lg:h-full md:h-full mb-24 lg:mb-0 md:mb-0 sm:py-24 px-5 bg-no-repeat bg-cover bg-center mt-16 lg:mt-10 md:mt-10">
       {/* Main content */}
       <div className="relative z-10 container w-full h-auto mx-auto text-center text-white">
         {/* Subheading */}
@@ -21,7 +21,7 @@ const Hero = () => {
         </h2>
 
         {/* Description */}
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed md:leading-8 max-w-2xl lg:max-w-4xl mx-auto mb-8 px-3">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed md:leading-8 max-w-3xl lg:max-w-4xl mx-auto mb-8 px-3">
           AproMax Engineering is a multidisciplinary engineering and design firm
           that combines expertise in engineering, design, and technology to
           drive progress and innovation. Our team of passionate problem-solvers
