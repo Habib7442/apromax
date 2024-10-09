@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="bg-gradient-to-b mt-10 from-gray-900 to-gray-800 text-white lg:py-20 py-5">
+    <section className=" mt-10 text-white lg:py-20 py-5">
       <div className="container mx-auto px-4 animate-fadeIn">
         <h1 className="text-2xl lg:text-4xl md:text-3xl font-bold text-blue-400 text-center mb-10">
           About AproMax Engineering LLP
