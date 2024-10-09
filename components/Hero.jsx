@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <header className="relative bg-header-1 w-full h-full mb-24 lg:mb-0 md:mb-0 sm:py-24 px-5 bg-no-repeat bg-cover bg-center lg:mt-10 md:mt-10 mt-0">
+    <header className="relative bg-header-1 w-full h-screen lg:h-full md:h-full mb-24 lg:mb-0 md:mb-0 sm:py-24 px-5 bg-no-repeat bg-cover bg-center lg:mt-10 md:mt-10 mt-0">
       {/* Main content */}
       <div className="relative z-10 container w-full h-auto mx-auto text-center text-white">
         {/* Subheading */}
