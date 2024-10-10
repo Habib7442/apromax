@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Sheet,
   SheetContent,
@@ -10,11 +10,23 @@ import Image from "next/image";
 import Link from "next/link";
 import servicesData from "@/constants/ServicesData";
 import { ContactIcon, Moon, Sun } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Toggle } from "@/components/ui/toggle";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -59,13 +71,86 @@ const MobileNav = () => {
                 </button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[425px] bg-slate-900 text-white">
-                {/* ... (Dialog content remains the same) ... */}
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold">
+                    Get in Touch
+                  </DialogTitle>
+                </DialogHeader>
+                <form className="grid gap-4 py-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <Input
+                      placeholder="First Name"
+                      className="bg-slate-800 border-slate-700"
+                    />
+                    <Input
+                      placeholder="Last Name"
+                      className="bg-slate-800 border-slate-700"
+                    />
+                  </div>
+                  <Input
+                    type="email"
+                    placeholder="Email"
+                    className="bg-slate-800 border-slate-700"
+                  />
+                  <Input
+                    placeholder="Designation"
+                    className="bg-slate-800 border-slate-700"
+                  />
+                  <Select>
+                    <SelectTrigger className="bg-slate-800 border-slate-700">
+                      <SelectValue placeholder="Select Region" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-slate-800">
+                      <SelectItem value="na">North America</SelectItem>
+                      <SelectItem value="eu">Europe</SelectItem>
+                      <SelectItem value="asia">Asia</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <Select>
+                    <SelectTrigger className="bg-slate-800 border-slate-700">
+                      <SelectValue placeholder="Select Service" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-slate-800">
+                      {servicesData.map((service, idx) => (
+                        <SelectItem
+                          key={idx}
+                          value={service.title.toLowerCase().replace(" ", "-")}
+                        >
+                          {service.title}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <Select>
+                    <SelectTrigger className="bg-slate-800 border-slate-700">
+                      <SelectValue placeholder="Select Industry" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-slate-800">
+                      <SelectItem value="tech">Technology</SelectItem>
+                      <SelectItem value="finance">Finance</SelectItem>
+                      <SelectItem value="healthcare">Healthcare</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <Textarea
+                    placeholder="Your message"
+                    className="bg-slate-800 border-slate-700"
+                  />
+                  <Button
+                    type="submit"
+                    className="bg-blue-200 hover:bg-blue-400 font-bold"
+                  >
+                    Send Message
+                  </Button>
+                </form>
               </DialogContent>
             </Dialog>
           </div>
         </div>
 
-        <SheetContent side="left" className="bg-slate-900 text-white scroll-y-auto">
+        <SheetContent
+          side="left"
+          className="bg-slate-900 text-white scroll-y-auto"
+        >
           <SheetHeader>
             {/* Navigation links */}
             <nav className="space-y-6 text-lg mt-4">
@@ -109,7 +194,9 @@ const MobileNav = () => {
               <Toggle
                 aria-label="Toggle theme"
                 pressed={theme === "dark"}
-                onPressedChange={(pressed) => setTheme(pressed ? "dark" : "light")}
+                onPressedChange={(pressed) =>
+                  setTheme(pressed ? "dark" : "light")
+                }
                 className="bg-slate-800 hover:bg-slate-700"
               >
                 {theme === "dark" ? (
