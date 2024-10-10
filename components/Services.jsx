@@ -28,14 +28,14 @@ const Services = () => {
       <h2 className="text-2xl lg:text-4xl md:text-3xl text-center font-bold uppercase text-blue-400 drop-shadow-lg mb-6">
         Our Services
       </h2>
-      <div className="w-full h-full flex flex-wrap items-center justify-center p-4 gap-12">
+      <div className="w-full h-full flex flex-wrap items-center justify-center gap-12">
         {servicesData.map((item, index) => {
           const descriptionPoints = item.description.split("|");
           const showReadMore = descriptionPoints.length > 3;
 
           return (
             <div
-              className="lg:min-h-[22.5rem] h-auto flex flex-col items-center justify-start sm:w-96 w-[80vw] p-4 border rounded-lg shadow-lg"
+              className="lg:min-h-[22.5rem] h-auto flex flex-col items-center justify-start sm:w-96 w-[80vw]"
               key={index}
             >
               <PinContainer title={item.title}>
@@ -55,7 +55,7 @@ const Services = () => {
                   />
                 </div>
 
-                <h1 className="font-bold lg:text-xl md:text-lg text-base line-clamp-1">
+                <h1 className="font-bold lg:text-xl md:text-lg text-base line-clamp-1 ml-1 lg:ml-0">
                   {item.title}
                 </h1>
 
@@ -64,7 +64,7 @@ const Services = () => {
                   style={{ color: "#BEC1DD", margin: "1vh 0" }}
                 >
                   {descriptionPoints.slice(0, 3).map((point, idx) => (
-                    <li key={idx} className="list-disc list-inside">
+                    <li key={idx} className="list-disc list-inside ml-1 lg:ml-0">
                       {point}
                     </li>
                   ))}
@@ -76,7 +76,7 @@ const Services = () => {
                   <Dialog>
                     <DialogTrigger asChild>
                       <button
-                        className="text-sm text-blue-500 underline mt-4 justify-start w-full"
+                        className="text-sm text-black font-bold bg-teal-400 px-2 py-1 rounded-lg underline mt-4 ml-4 justify-start w-full"
                         onClick={() =>
                           handleReadMore(descriptionPoints, item.title)
                         }
