@@ -6,9 +6,9 @@ const Hero = () => {
     "AproMax Engineering is a multidisciplinary engineering and design firm that combines expertise in engineering, design, and technology to drive progress and innovation. Our team of passionate problem-solvers and engineers is dedicated to delivering cutting-edge solutions tailored to meet our client's unique needs.";
 
   return (
-    <header className="relative bg-header-1 w-full min-h-screen bg-no-repeat bg-cover bg-center sm:mt-0 lg:mt-4">
+    <header className="relative bg-header-1 w-full bg-no-repeat bg-cover bg-center sm:mt-0 lg:mt-4">
       {/* Main content */}
-      <div className="relative z-10 container mx-auto text-center text-white px-4 py-5 sm:py-24 flex flex-col min-h-screen">
+      <div className="relative z-10 container mx-auto text-center text-white px-4 py-5 sm:py-24 flex flex-col mb-24">
         {/* Main heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase mb-3 text-white leading-tight drop-shadow-md">
           Engineering Services

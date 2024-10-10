@@ -25,7 +25,7 @@ const Services = () => {
 
   return (
     <div>
-      <h2 className="text-2xl lg:text-4xl md:text-3xl text-center font-bold uppercase text-blue-400 drop-shadow-lg mb-6">
+      <h2 className="text-2xl lg:text-4xl md:text-3xl text-center font-bold uppercase text-blue-400 drop-shadow-lg lg:mb-6 md:mb-2">
         Our Services
       </h2>
       <div className="w-full h-full flex flex-wrap items-center justify-center gap-12">
