@@ -1,6 +1,6 @@
 "use client";
-import React, { useState,useEffect } from "react";
-import {  Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import React, { useState, useEffect } from "react";
+import { Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import servicesData from "@/constants/ServicesData";
 import Link from "next/link";
@@ -44,7 +44,6 @@ function Navbar({ className }) {
     setMounted(true);
   }, []);
 
-
   return (
     <div
       className={cn("fixed top-10 inset-x-0 max-w-7xl mx-auto z-50", className)}
@@ -67,17 +66,23 @@ function Navbar({ className }) {
                 <Link href="/services" key={idx}>
                   <ProductItem
                     title={service.title}
-                    description={service.description}
+                    description={service.description.split("|")} // Splitting the description by '|'
                     href=""
                   />
                 </Link>
               ))}
             </div>
           </MenuItem>
-          <Link href="/about" className="text-black dark:text-white-100 hover:text-gray-300">
+          <Link
+            href="/about"
+            className="text-black dark:text-white-100 hover:text-gray-300"
+          >
             About Us
           </Link>
-          <Link href="/careers" className="text-black dark:text-white-100 hover:text-gray-300">
+          <Link
+            href="/careers"
+            className="text-black dark:text-white-100 hover:text-gray-300"
+          >
             Careers
           </Link>
         </div>
