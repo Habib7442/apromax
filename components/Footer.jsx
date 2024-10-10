@@ -23,13 +23,13 @@ const Footer = () => {
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium dark:text-gray-200 text-gray-900 tracking-widest text-sm mb-3">
               OFFERINGS
             </h2>
             <nav className="list-none mb-10">
               {servicesData.map((item, idx) => (
                 <li key={idx}>
-                  <a className="text-blue-200 cursor-pointer hover:text-gray-400">
+                  <a className="dark:text-blue-200 text-blue-700 cursor-pointer hover:text-gray-400">
                     {item.title}
                   </a>
                 </li>
@@ -37,7 +37,7 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-200 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium dark:text-gray-200 text-gray-900  tracking-widest text-sm mb-3">
               SOLUTIONS
             </h2>
             <nav className="list-none mb-10">
@@ -56,19 +56,19 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium uppercase text-gray-200 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium uppercase dark:text-gray-200 text-gray-900 tracking-widest text-sm mb-3">
               Work Inquiries
             </h2>
             <nav className="list-none mb-10">
               <li className="flex gap-2 items-center justify-center lg:justify-start">
                 <MailIcon className="w-5 h-5 text-red-300" />
-                <a className="text-blue-200 hover:text-gray-400">
+                <a className="dark:text-blue-200 text-blue-700 hover:text-gray-400">
                   info@apromaxeng.com
                 </a>
               </li>
               <li className="flex gap-2 items-center mt-2 justify-center lg:justify-start">
                 <MapPin className="w-5 h-5 text-red-300" />
-                <a className="text-blue-200 hover:text-gray-400">
+                <a className="dark:text-blue-200 text-blue-700 hover:text-gray-400">
                   57 Idgah Rd, Sijubari,
                   <br />
                   Hatigaon, Guwahati
@@ -81,14 +81,20 @@ const Footer = () => {
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium uppercase text-gray-200 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium uppercase dark:text-gray-200 text-gray-900  tracking-widest text-sm mb-3">
               Phone
             </h2>
             <nav className="list-none mb-10">
+              <li className="flex gap-2 mb-2 items-center justify-center lg:justify-start ">
+                <PhoneCallIcon className="w-5 h-5 text-red-300" />
+                <a className="dark:text-blue-200 flex gap-2 text-blue-700 cursor-pointer hover:text-gray-400">
+                  +91-9577291349 <img className="w-5 h-5" src="https://em-content.zobj.net/source/apple/391/flag-india_1f1ee-1f1f3.png" alt="" />
+                </a>
+              </li>
               <li className="flex gap-2 items-center justify-center lg:justify-start ">
                 <PhoneCallIcon className="w-5 h-5 text-red-300" />
-                <a className="text-blue-200 cursor-pointer hover:text-gray-400">
-                  +1 (312) 313-9125
+                <a className="dark:text-blue-200 flex gap-2 text-blue-700 cursor-pointer hover:text-gray-400">
+                  +1 (312) 313-9125 <img className="w-5 h-5" src="https://em-content.zobj.net/source/apple/51/flag-for-united-states_1f1fa-1f1f8.png" alt="" />
                 </a>
               </li>
             </nav>

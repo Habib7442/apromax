@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className=" mt-10 text-white lg:py-20 py-5">
+    <section className=" mt-12 text-white lg:py-20">
       <div className="container mx-auto px-4 animate-fadeIn">
         <h1 className="text-2xl lg:text-4xl md:text-3xl font-bold text-blue-400 text-center mb-10">
           About AproMax Engineering LLP
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl leading-relaxed max-w-4xl mx-auto text-center mb-20">
+        <p className="text-lg md:text-xl text-gray-900 dark:text-white lg:text-2xl leading-relaxed max-w-4xl mx-auto text-center mb-20">
           AproMax Engineering is a forward-thinking, multidisciplinary
           engineering firm that embodies the spirit of approaching maximum
           potential in every project. With a relentless pursuit of excellence
@@ -24,7 +24,7 @@ export default function About() {
             <h2 className="text-2xl lg:text-4xl md:text-3xl font-bold mb-5 text-blue-400">
               Our Mission
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed">
+            <p className="text-lg text-gray-900 dark:text-white md:text-xl leading-relaxed">
               Our mission is to empower progress through engineering excellence.
               We strive to deliver high-quality solutions, foster a culture of
               innovation, build long-term relationships, and make a positive
@@ -46,13 +46,13 @@ export default function About() {
             alt="About Us Two"
             width={1000}
             height={1000}
-            className="w-full lg:w-2/5 h-auto rounded-lg shadow-lg mb-10 lg:mb-0 animate-slideInLeft"
+            className="w-full lg:w-2/5 h-auto rounded-lg shadow-lg mb-10 mt-4 lg:mb-0 animate-slideInLeft"
           />
           <div className="lg:w-1/2 animate-slideInRight">
             <h2 className="text-2xl lg:text-4xl md:text-3xl font-bold mb-5 text-blue-400">
               Our Vision
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-900 mb-5 dark:text-white leading-relaxed">
               Our vision is to become a globally recognized leader in
               engineering excellence, driving innovation and sustainable
               progress that improves lives and shapes a better future.

@@ -1,11 +1,14 @@
 "use client";
-import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import React, { useState,useEffect } from "react";
+import {  Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import servicesData from "@/constants/ServicesData";
 import Link from "next/link";
 import Image from "next/image";
 import { ContactIcon } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
+import { Toggle } from "@/components/ui/toggle";
+import { useTheme } from "next-themes";
 import {
   Dialog,
   DialogContent,
@@ -34,6 +37,13 @@ export function NavbarDemo() {
 
 function Navbar({ className }) {
   const [active, setActive] = useState(null);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
 
   return (
     <div
@@ -45,7 +55,7 @@ function Navbar({ className }) {
             src="/assets/images/AproMaxLogo.png"
             width={100}
             height={100}
-            className="w-[100px] h-full"
+            className="w-[200px] h-full"
             alt="AproMax Logo"
           />
         </Link>
@@ -64,15 +74,15 @@ function Navbar({ className }) {
               ))}
             </div>
           </MenuItem>
-          <Link href="/about" className="text-white hover:text-gray-300">
+          <Link href="/about" className="text-black dark:text-white-100 hover:text-gray-300">
             About Us
           </Link>
-          <Link href="" className="text-white hover:text-gray-300">
+          <Link href="/careers" className="text-black dark:text-white-100 hover:text-gray-300">
             Careers
           </Link>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center gap-5">
           <Dialog>
             <DialogTrigger asChild>
               <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
@@ -156,6 +166,23 @@ function Navbar({ className }) {
               </form>
             </DialogContent>
           </Dialog>
+          <div className="flex items-center space-x-4">
+            {mounted && (
+              <Toggle
+                aria-label="Toggle theme"
+                pressed={theme === "dark"}
+                onPressedChange={(pressed) =>
+                  setTheme(pressed ? "dark" : "light")
+                }
+              >
+                {theme === "dark" ? (
+                  <Moon className="h-4 w-4" />
+                ) : (
+                  <Sun className="h-4 w-4" />
+                )}
+              </Toggle>
+            )}
+          </div>
         </div>
       </Menu>
     </div>

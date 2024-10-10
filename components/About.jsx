@@ -26,6 +26,7 @@ const About = () => {
           width={1000}
           height={1000}
           className="mx-auto w-full h-full object-cover"
+          alt=""
         />
       </div>
     </div>

@@ -64,7 +64,7 @@ const Services = () => {
                   style={{ color: "#BEC1DD", margin: "1vh 0" }}
                 >
                   {descriptionPoints.slice(0, 3).map((point, idx) => (
-                    <li key={idx} className="list-disc list-inside ml-1 lg:ml-0">
+                    <li key={idx} className="list-disc list-inside ml-1 lg:ml-0 text-black dark:text-[#BEC1DD]">
                       {point}
                     </li>
                   ))}

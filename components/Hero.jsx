@@ -6,20 +6,20 @@ const Hero = () => {
     "AproMax Engineering is a multidisciplinary engineering and design firm that combines expertise in engineering, design, and technology to drive progress and innovation. Our team of passionate problem-solvers and engineers is dedicated to delivering cutting-edge solutions tailored to meet our client's unique needs.";
 
   return (
-    <header className="relative bg-header-1 w-full bg-no-repeat bg-cover bg-center sm:mt-0 lg:mt-4">
+    <header className="relative bg-header-1 w-full bg-no-repeat bg-cover bg-center sm:mt-0 lg:mt-7">
       {/* Main content */}
-      <div className="relative z-10 container mx-auto text-center text-white px-4 py-5 sm:py-24 flex flex-col mb-24">
+      <div className="relative z-10 container mx-auto text-center px-4 py-5 sm:py-24 flex flex-col mb-24">
         {/* Main heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase mb-3 text-white leading-tight drop-shadow-md">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase mb-3 text-black dark:text-white leading-tight drop-shadow-md">
           Engineering Services
         </h1>
 
         {/* Highlighted heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase text-blue-400 drop-shadow-lg mb-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase text-blue-400 dark:text-blue-400 drop-shadow-lg mb-6">
           Creative & Professional
         </h2>
 
-        <div className="mb-8">
+        <div className="mb-8 text-gray-800 dark:text-white">
           <TextGenerateEffect words={words} />
         </div>
 
@@ -31,7 +31,7 @@ const Hero = () => {
             </span>
           </Link>
           <Link href="/services">
-            <span className="text-sm md:text-base inline-block px-8 sm:px-10 py-3 text-white uppercase bg-transparent border border-white hover:bg-white hover:text-blue-500 transition duration-300 ease-in-out rounded-full shadow-lg hover:shadow-xl w-full sm:w-auto">
+            <span className="text-sm md:text-base inline-block px-8 sm:px-10 py-3 text-gray-800 dark:text-white uppercase bg-transparent border border-gray-800 dark:border-white hover:bg-gray-800 dark:hover:bg-white hover:text-white dark:hover:text-gray-800 transition duration-300 ease-in-out rounded-full shadow-lg hover:shadow-xl w-full sm:w-auto">
               Services
             </span>
           </Link>
