@@ -26,7 +26,7 @@ const servicesData = [
   {
     title: "Web And App Development",
     description:
-      "Website Design|Website Development|Responsive Web design|Ecommerce website development|Mobile App Development|Cross-plantform App Development|(React Native, Flutter)|Enterprise App Development|Custom App Development",
+      "Website Design|Website Development|Responsive Web design|Ecommerce website development|Mobile App Development|Cross-platform App Development|(React Native, Flutter)|Enterprise App Development|Custom App Development",
     image: "/assets/images/AproMaxImages/AproMax/web-dev-img.jpg",
   },
   {

@@ -1,6 +1,7 @@
 import servicesData from "@/constants/ServicesData";
 import { MailIcon, MapPin, PhoneCallIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -42,16 +43,16 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <Link href="/" className="dark:text-blue-200 text-blue-700 cursor-pointer hover:text-gray-400">Home</Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <Link href="/services" className="dark:text-blue-200 text-blue-700 cursor-pointer hover:text-gray-400">Services</Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <Link href="/about" className="dark:text-blue-200 text-blue-700 cursor-pointer hover:text-gray-400">About Us</Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <Link href="/careers" className="dark:text-blue-200 text-blue-700 cursor-pointer hover:text-gray-400">Careers</Link>
               </li>
             </nav>
           </div>
