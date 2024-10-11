@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Faq from "@/components/Faq";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Services />
         <About />
+        <Faq />
       </HeroHighlight>
     </main>
   );
